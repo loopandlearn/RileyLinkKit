@@ -12,17 +12,21 @@ open class RileyLinkPumpManager {
 
     open var rileyLinkConnectionManagerState: RileyLinkConnectionState?
     
-    public init(rileyLinkDeviceProvider: RileyLinkDeviceProvider) {
-        
-        self.rileyLinkDeviceProvider = rileyLinkDeviceProvider
+    public init(rileyLinkDeviceProvider: RileyLinkDeviceProvider? = nil) {
 
-        rileyLinkDeviceProvider.delegate = self
+        if let rileyLinkDeviceProvider = rileyLinkDeviceProvider {
+            self.rileyLinkDeviceProvider = rileyLinkDeviceProvider
 
-        // Listen for device notifications
-        NotificationCenter.default.addObserver(self, selector: #selector(receivedRileyLinkPacketNotification(_:)), name: .DevicePacketReceived, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(receivedRileyLinkTimerTickNotification(_:)), name: .DeviceTimerDidTick, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(receivedRileyLinkBatteryUpdate(_:)), name: .DeviceBatteryLevelUpdated, object: nil)
+            rileyLinkDeviceProvider.delegate = self
 
+            // Listen for device notifications
+            NotificationCenter.default.addObserver(self, selector: #selector(receivedRileyLinkPacketNotification(_:)), name: .DevicePacketReceived, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(receivedRileyLinkTimerTickNotification(_:)), name: .DeviceTimerDidTick, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(receivedRileyLinkBatteryUpdate(_:)), name: .DeviceBatteryLevelUpdated, object: nil)
+        } else {
+            // ZZZ placeholder for case where a RileyLink will not actually be used for a particular pump type
+            self.rileyLinkDeviceProvider = RileyLinkBluetoothDeviceProvider(autoConnectIDs: [])
+        }
     }
     
     /// Access to rileylink devices
