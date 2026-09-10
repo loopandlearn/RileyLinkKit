@@ -648,6 +648,12 @@
             "value" : "Livello Batteria"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batterinivå"
+          }
+        },
         "nb-NO" : {
           "stringUnit" : {
             "state" : "translated",
@@ -941,6 +947,12 @@
             "value" : "Connesso"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilkoblet"
+          }
+        },
         "nb-NO" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1076,6 +1088,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "In fase di Connessione"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilkobler"
           }
         },
         "nb-NO" : {
@@ -2089,6 +2107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disconnesso"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frakoblet"
           }
         },
         "nb-NO" : {
@@ -3742,6 +3766,12 @@
             "value" : "Spento"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Av"
+          }
+        },
         "nb-NO" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3877,6 +3907,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acceso"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På"
           }
         },
         "nb-NO" : {
